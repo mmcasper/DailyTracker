@@ -1,5 +1,6 @@
 import csv
 from csv import DictReader, DictWriter
+import list_entries
 
 
 #function to add new rows to csv dictionary
@@ -35,7 +36,7 @@ append_dict_as_row('users.csv', row_dict, field_names)
 
 history = input('Would you like to see your previous entries? y/n ')
 if history == 'y':
-    import list_entries
+    list_entries.list_history()
 else:
     pass
 #print('Thank you for checking in today!')
