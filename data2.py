@@ -39,7 +39,7 @@ if history == 'y':
     list_entries.list_history()
 else:
     pass
-#print('Thank you for checking in today!')
+
 goodbye()
 
 
