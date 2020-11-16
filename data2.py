@@ -1,7 +1,7 @@
 import csv
 from csv import DictReader, DictWriter
 import list_entries
-
+import re
 
 #function to add new rows to csv dictionary
 def append_dict_as_row(file_name, dict_of_elem, field_names):
@@ -22,7 +22,12 @@ username = input('Please create a username without any spaces: ')
 #test for whitespace
 name = input('What is your first name? ')
 date = input('What is today\'s date? Please follow the mm/dd/yyyy format. ')
-#test for correct formatting of date, or get date from datetime
+        #test for correct formatting of date, or get date from datetime
+#while date not re.match(r'\d{2}\/\d{2}\/\d{4}'):
+    #print("Please enter date following the mm/dd/yyyy format.")
+#else:
+    #continue
+
 journal = input('Would you like to record any thoughts for this day? ')
 #create empty string for no
 activity = input('Would you like to record any physical activity for the day? ')
@@ -37,6 +42,7 @@ append_dict_as_row('users.csv', row_dict, field_names)
 history = input('Would you like to see your previous entries? y/n ')
 if history == 'y':
     list_entries.list_history()
+    
 else:
     pass
 
