@@ -23,12 +23,19 @@ username = input('Please create a username without any spaces: ')
 #test for whitespace
 name = input('What is your first name? ')
 date = input('What is today\'s date? Please follow the mm/dd/yyyy format. ')
-        #test for correct formatting of date, or get date from datetime
+        #test for correct formatting of date
+answer = True
+while answer == True:
+    date = input('Please enter the date in the mm/dd/yyyy format?. ')
 
-#while date not re.match(r'\d{2}\/\d{2}\/\d{4}'):
-    #print("Please enter date following the mm/dd/yyyy format.")
-#else:
-    #continue
+    if not re.match(r'(\d{2}(\/)\d{2}(\/)\d{4})', date):
+        print('Please follow the correct format for date: mm/dd/yyyy. ')
+        answer = True
+    else:
+        print('The date is: ' + date)
+        answer = False
+
+
 
 journal = input('Would you like to record any thoughts for this day? ')
 #create empty string for no
