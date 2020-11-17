@@ -9,18 +9,18 @@ with open(filename) as f:
     reader = csv.reader(f)
     header_row = next(reader)
 
-    #if you wanted to see each index and data for header column
-    for index, column_header in enumerate(header_row):
-        print(index, column_header)
+#if you wanted to see each index and data for header column
+    #for index, column_header in enumerate(header_row):
+        #print(index, column_header)
 
 
 
 
 #create ratings list to store data from each row
-ratings = []
-for row in reader:
-    ratings.append(row[5])   #append daily rating from each row
-print(ratings)
+    ratings = []
+    for row in reader:
+        ratings.append(row[5])   #append daily rating from each row
+    print(ratings)
 
 
 
