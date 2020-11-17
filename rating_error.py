@@ -18,7 +18,6 @@ while answer == True:
         answer = False
 
 #use regex to check date format
-#date = input('What is today\'s date? Please follow the mm/dd/yyyy format. ')
 answer = True
 while answer == True:
     date = input('Please enter the date in the mm/dd/yyyy format?. ')
@@ -29,13 +28,6 @@ while answer == True:
     else:
         print('The date is: ' + date)
         answer = False
-
-#while re.match(r'(\d{2}(\/)\d{2}(\/)\d{4})', date):
-    #or (^([0-2][0-9]|(3)[0-1])(\/)(((0)[0-9])|((1)[0-2]))(\/)\d{4})
-    #print('Error. Please follow directions. ')
-    #rating = input("Please follow the mm/dd/yyyy format.  ")
-#print('The date is: ' + date)
-
 
 goodbye()
 

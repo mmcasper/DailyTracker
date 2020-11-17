@@ -19,6 +19,7 @@ def goodbye():
 #create welcome and exit to leave the program
 
 #collect fields from user
+
 username = input('Please create a username without any spaces: ')
 #test for whitespace
 name = input('What is your first name? ')
