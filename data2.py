@@ -38,10 +38,10 @@ while answer == True:
 
 
 
-journal = input('Would you like to record any thoughts for this day? ')
+journal = input('Please enter any thoughts you would like to record any thoughts for this day? ')
 #create empty string for no
 
-activity = input('Would you like to record any physical activity for the day? ')
+activity = input('Please record any physical activity for the day? ')
 #create empty string for no
 
 answer = True
