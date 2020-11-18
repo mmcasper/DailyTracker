@@ -20,14 +20,14 @@ def goodbye():
 
 #collect fields from user
 
-username = input('Please create a username without any spaces: ')
+username = input('Please create a username without any spaces: ') + (',')
 #test for whitespace
-name = input('What is your first name? ')
-date = input('What is today\'s date? Please follow the mm/dd/yyyy format. ')
+name = input('What is your first name? ') + (',')
+date = input('What is today\'s date? Please follow the mm/dd/yyyy format. ') + (',')
         #test for correct formatting of date
 answer = True
 while answer == True:
-    date = input('Please enter the date in the mm/dd/yyyy format?. ')
+    date = input('Please enter the date in the mm/dd/yyyy format?. ') + (',')
 
     if not re.match(r'(\d{2}(\/)\d{2}(\/)\d{4})', date):
         print('Please follow the correct format for date: mm/dd/yyyy. ')
@@ -38,10 +38,10 @@ while answer == True:
 
 
 
-journal = input('Please enter any thoughts you would like to record any thoughts for this day? ')
+journal = input('Please enter any thoughts you would like to record any thoughts for this day? ') + (',')
 #create empty string for no
 
-activity = input('Please record any physical activity for the day? ')
+activity = input('Please record any physical activity for the day? ') + (',')
 #create empty string for no
 
 answer = True
