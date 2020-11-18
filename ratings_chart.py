@@ -1,5 +1,6 @@
 import csv
 
+
 #from matplotlib import pyplot as plt
 
 filename = 'users.csv'
@@ -19,7 +20,8 @@ with open(filename) as f:
 #create ratings list to store data from each row
     ratings = []
     for row in reader:
-        ratings.append(row[5])   #append daily rating from each row
+        #append daily rating from each row
+        ratings.append(row[5])  
     print(ratings)
 
 
