@@ -20,7 +20,6 @@ def goodbye():
 print("Welcome to your daily mood tracker. You will be asked for a daily rating after recording events and activities that may have affected that rating.")
 
 #collect fields from user
-username = input('Please create a username without any spaces: ')
 #test for username for whitespace
 test = True
 while test ==  True:
@@ -67,6 +66,7 @@ if activity == (''):
     activity = ('no input')
 
 #Use regex to test for requested rating input
+#Still nedd to allow only 1 valid #
 answer = True
 while answer == True:
     rating = input('What is your rating for this day on a scale of 1-10? ')
@@ -90,6 +90,8 @@ def get_input():
 
 if get_input() == 'y':
     list_entries.list_history()
+
+#should force y/n
     
 else:
     pass
