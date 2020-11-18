@@ -21,15 +21,34 @@ print("Welcome to your daily mood tracker. You will be asked for a daily rating 
 
 #collect fields from user
 username = input('Please create a username without any spaces: ')
-#test for whitespace
+#test for username for whitespace
+test = True
+while test ==  True:
+    username = input('Please create a username without any spaces. ')
 
-name = input('What is your first name? ')
+    if re.search(r'\s', username):
+        print('Please be sure there are no spaces in your username. ')
+        test = True
+    else:
+        test = False
+
+if username == (''):
+    username = ('no input')
+
+#Collect and force input for first name
+name_answer = True
+while name_answer == True:
+    name = input('What is your first name? ')
+    if name == (''):
+        print('Please enter your first name. ')
+        name_answer = True
+    else:
+        name_answer = False
 
 #Use regex to test for correct formatting of date
 date_answer = True
 while date_answer == True:
     date = input('Please enter the date in the mm/dd/yyyy format?. ')
-
     if not re.match(r'(\d{2}(\/)\d{2}(\/)\d{4})', date):
         print('Please follow the correct format for date: mm/dd/yyyy. ')
         date_answer = True
@@ -38,16 +57,19 @@ while date_answer == True:
         date_answer = False
 
 journal = input('Please enter any thoughts you would like to record any thoughts for this day? ')
-#create empty string for no
+#create empty string output
+if journal == (''):
+    journal = ('no input')
 
 activity = input('Please record any physical activity for the day? ')
-#create empty string for no
+#create empty string output
+if activity == (''):
+    activity = ('no input')
 
 #Use regex to test for requested rating input
 answer = True
 while answer == True:
     rating = input('What is your rating for this day on a scale of 1-10? ')
-
     if not re.match(r'\b([1-9]|10)\b', rating):
         print('Error. Please follow directions. ')
         answer = True

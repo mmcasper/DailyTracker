@@ -4,6 +4,20 @@ import csv
 def goodbye():
     print('Thank you for checking in today!')
 
+#test username for whitespace
+test = True
+while test ==  True:
+    username = input('Please create a username without any spaces. ')
+
+    if re.search(r'\s', username):
+        print('Please be sure there are no spaces in your username. ')
+        test = True
+    else:
+        test = False
+
+if username == (''):
+    username = ('no input')
+
 
 #use regex to validate rating
 answer = True
