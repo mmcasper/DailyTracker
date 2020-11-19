@@ -91,14 +91,18 @@ def get_input():
 if get_input() == 'y':
     list_entries.list_history()
 
-#should force y/n
+#should force y/n? (y only has direct result. n can be anything)
     
 else:
     pass
 
 goodbye()
 
-
+#Create functions from repetitive code: 'no input' for blank field, checking input for format with regex
+#Keep working on ratings_chart to graph ratings
+#Work on function to display data by username
+#Underline headings for csv file
+#Create visualization of file to align data with headers
 
 
 
