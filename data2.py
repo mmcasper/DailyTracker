@@ -91,7 +91,7 @@ def get_input():
 if get_input() == 'y':
     list_entries.list_history()
 
-#should force y/n? (y only has direct result. n can be anything)
+#should force y/n? (y only has direct result. n can be any input)
     
 else:
     pass
